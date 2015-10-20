@@ -1,5 +1,5 @@
 <%@ taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
-Teste
+
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
