@@ -3,11 +3,11 @@
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#"><bean:message key="label.rdbToOnto" /></a>
+			<a class="navbar-brand" href="#"><bean:message key="label.rdb.to.onto" /></a>
 		</div>
 		<div>
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#"><bean:message key="label.overview" /></a></li>
+				<li><a href="#"><bean:message key="label.overview" /></a></li>
 				<li class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown" href="#"><bean:message key="label.download" /><span class="caret"></span></a>
 					<ul class="dropdown-menu">
