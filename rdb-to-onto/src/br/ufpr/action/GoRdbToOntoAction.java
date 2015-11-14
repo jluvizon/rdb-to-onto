@@ -12,9 +12,6 @@ import br.ufpr.dao.PessoaDao;
 
 public class GoRdbToOntoAction extends BaseAction {
 	
-	protected static final String SUCCESS = "success";
-	protected static final String FAILURE = "failure";
-
 	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 

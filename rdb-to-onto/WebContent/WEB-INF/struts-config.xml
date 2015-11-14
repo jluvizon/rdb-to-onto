@@ -20,7 +20,7 @@
 	
 	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
 	
-	<message-resources parameter="br.ufpr.properties.MessagesBundle" />
+	<message-resources parameter="propertiesFiles.MessagesBundle" />
 	
 	<plug-in className="org.apache.struts.tiles.TilesPlugin">
 		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
