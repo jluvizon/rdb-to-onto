@@ -10,5 +10,6 @@
 
 <script src="<%=contextPath%>/pages/js/jquery-1.11.3.min.js"></script>
 <script src="<%=contextPath%>/pages/js/bootstrap-3.3.5.min.js"></script>
+<script src="<%=contextPath%>/pages/js/bootbox-4.0.0.min.js"></script>
 
 <title><bean:message key="label.rdb.to.onto" /></title>
