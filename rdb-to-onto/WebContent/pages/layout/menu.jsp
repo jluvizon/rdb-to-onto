@@ -9,7 +9,7 @@ $(document).ready(function(){
 	$(".navbar-nav li").removeClass("active");
 });
 </script>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="#" onclick="javascript: goToPage('RdbToOnto');"><bean:message key="label.rdb.to.onto" /></a>

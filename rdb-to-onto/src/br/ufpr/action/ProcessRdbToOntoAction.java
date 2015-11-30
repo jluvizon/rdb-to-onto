@@ -9,6 +9,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import br.ufpr.bo.RdbToOntoBO;
 import br.ufpr.form.RdbToOntoForm;
 
 public class ProcessRdbToOntoAction extends BaseAction {
@@ -18,12 +19,14 @@ public class ProcessRdbToOntoAction extends BaseAction {
 		
 		RdbToOntoForm rdbToOntoForm = (RdbToOntoForm) form;
 		
-		Scanner scanner = new Scanner(rdbToOntoForm.getDatabaseStructure().getInputStream(), "UTF-8");
+		/*Scanner scanner = new Scanner(rdbToOntoForm.getDatabaseStructure().getInputStream(), "UTF-8");
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             System.out.println(line);
         }
-        scanner.close();
+        scanner.close();*/
+		RdbToOntoBO rdbToOntoBO = new RdbToOntoBO();
+		rdbToOntoBO.createDatabase(rdbToOntoForm);
 		
 		return null;
 		
