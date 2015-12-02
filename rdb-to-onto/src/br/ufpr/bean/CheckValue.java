@@ -7,27 +7,26 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "t008_database_domain")
-public class DatabaseDomain implements Serializable {
+@Table(name = "t006_check_value")
+public class CheckValue implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "c008_database_domain_id", nullable = false, unique = true)
+	@Column(name = "c006_check_value_id", nullable = false, unique = true)
 	private Long id;
 
-	@Column(name = "c008_description", nullable = false)
+	@Column(name = "c006_description", nullable = false)
 	private String description;
 
-	@ManyToOne
-	@JoinColumn(name = "c001_database_id")
-	private Database database;
+	@Column(name = "c006_abreviation", nullable = true)
+	private String abreviation;
+
+	private CheckSubject checkSubject;
 
 	public Long getId() {
 		return id;
@@ -45,12 +44,20 @@ public class DatabaseDomain implements Serializable {
 		this.description = description;
 	}
 
-	public Database getDatabase() {
-		return database;
+	public String getAbreviation() {
+		return abreviation;
 	}
 
-	public void setDatabase(Database database) {
-		this.database = database;
+	public void setAbreviation(String abreviation) {
+		this.abreviation = abreviation;
+	}
+
+	public CheckSubject getCheckSubject() {
+		return checkSubject;
+	}
+
+	public void setCheckSubject(CheckSubject checkSubject) {
+		this.checkSubject = checkSubject;
 	}
 
 }

@@ -26,7 +26,7 @@ public abstract class GenericDao {
         }
     }
 
-    protected void delete(Object obj) {
+    public void delete(Object obj) {
         try {
             startOperation();
             session.delete(obj);
@@ -37,9 +37,9 @@ public abstract class GenericDao {
             HibernateFactory.close(session);
         }
     }
-
+    
     @SuppressWarnings({ "rawtypes", "unchecked" })
-	protected Object find(Class clazz, Long id) {
+	public Object find(Class clazz, Long id) {
         Object obj = null;
         try {
             startOperation();
@@ -54,7 +54,7 @@ public abstract class GenericDao {
     }
 
     @SuppressWarnings("rawtypes")
-	protected List findAll(Class clazz) {
+	public List findAll(Class clazz) {
         List objects = null;
         try {
             startOperation();
@@ -78,5 +78,9 @@ public abstract class GenericDao {
         session = HibernateFactory.openSession();
         tx = session.beginTransaction();
     }
+    
+    protected Session getSession() {
+		return HibernateFactory.openSession();
+	}
 
 }

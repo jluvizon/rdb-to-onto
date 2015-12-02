@@ -7,27 +7,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "t008_database_domain")
-public class DatabaseDomain implements Serializable {
+@Table(name = "t005_datatype")
+public class Datatype implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "c008_database_domain_id", nullable = false, unique = true)
+	@Column(name = "c005_datatype_id", nullable = false, unique = true)
 	private Long id;
 
-	@Column(name = "c008_description", nullable = false)
+	@Column(name = "c005_description", nullable = false)
 	private String description;
-
-	@ManyToOne
-	@JoinColumn(name = "c001_database_id")
-	private Database database;
 
 	public Long getId() {
 		return id;
@@ -43,14 +37,6 @@ public class DatabaseDomain implements Serializable {
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public Database getDatabase() {
-		return database;
-	}
-
-	public void setDatabase(Database database) {
-		this.database = database;
 	}
 
 }
